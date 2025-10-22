@@ -6,10 +6,9 @@
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:47:04 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/20 18:47:34 by mohamed          ###   ########.fr       */
+/*   Updated: 2025/10/22 16:46:23 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 /*   Clean name for different const value    */
 

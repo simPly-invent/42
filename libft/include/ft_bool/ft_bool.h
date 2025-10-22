@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.h                                        :+:      :+:    :+:   */
+/*   ft_bool.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 17:58:25 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 16:45:26 by mohamed          ###   ########.fr       */
+/*   Created: 2025/10/22 16:24:59 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/22 16:26:32 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  function for find occurence of chracter in string  */
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+/* prototype of function that return an boolean */
+int	ft_isalnum(int c);
+int	ft_isalpha(int c);
+int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_isprint(int ch);

@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.h                                        :+:      :+:    :+:   */
+/*   ft_cpy.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 17:58:25 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 16:45:26 by mohamed          ###   ########.fr       */
+/*   Created: 2025/10/22 16:12:02 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/22 16:18:20 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  function for find occurence of chracter in string  */
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+/* prototype for function that can copy character or bloc memory */
+
+void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
