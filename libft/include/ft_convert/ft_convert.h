@@ -6,7 +6,7 @@
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:38:31 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 16:39:57 by mobenais         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:20:24 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,4 @@
 int	ft_atoi(const char *str);
 int	ft_toupper(int ch);
 int	ft_tolower(int ch);
+

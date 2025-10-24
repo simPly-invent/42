@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   constant.h                                         :+:      :+:    :+:   */
+/*   ft_constant.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:47:04 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 16:46:23 by mobenais         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:30:48 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 #define MAX_INT_DIGIT 9
 #define MAX_INT 2147483647
 #define MIN_INT -2147483648
-
+#define SIZE_T_MAX (2^32 - 1)
 /*        Value ascii of whitespace           */
 
 #define MIN_VALUE_WHITESPACE 9

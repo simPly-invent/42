@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 16:59:40 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 17:34:06 by mobenais         ###   ########.fr       */
+/*   Created: 2025/10/24 15:45:38 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/24 16:12:29 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
-
-char	*ft_strchr(const char *s, int c)
+int	count_word()
 {
-	size_t			i;
-	unsigned char	uc;
 
-	i = 0;
-	uc = (unsigned char)c;
-	while (s[i])
-	{
-		if (s[i] == uc)
-		{
-			return ((char *)&s[i]);
-		}
-		i++;
-	}
-	return (NULL);
 }
-/*
-int main(void)
+
+char	**ft_split(char const *s, char c)
 {
-	printf("ft_strchr : %s\n", ft_strchr("bonjour", 'a'));
-	printf("strchr    : %s\n", strchr("bonjour", 'a'));
+
 }
-*/
