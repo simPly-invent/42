@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamed <mohamed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:57:29 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/20 16:57:32 by mobenais         ###   ########.fr       */
+/*   Updated: 2025/10/25 16:37:28 by mohamed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 //-------------main-function-----------//
 int main()
 {
-	char src[] = "benjour";
+	char src[] = "bonjeour";
 	char dest[] = "oui je suis malade";
 
 	ft_memccpy(dest, src, 'e', 5);

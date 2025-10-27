@@ -6,7 +6,7 @@
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:00:31 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/23 00:31:53 by mobenais         ###   ########.fr       */
+/*   Updated: 2025/10/25 16:41:48 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[total_len] = '\0';
 	return (ptr);
 }
-/*
+
 int main(void)
 {
 	char *str_1 = "oui je suis gentil";
 	char *str_2 = "et con";
 	printf("resultat = %s\n", ft_strjoin(str_1, str_2));
 }
-*/
