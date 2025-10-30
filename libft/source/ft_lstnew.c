@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.h                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 17:58:25 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/24 16:14:08 by mobenais         ###   ########.fr       */
+/*   Created: 2025/10/30 20:37:56 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/30 21:24:57 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*  function for find occurence of chracter in string  */
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+#include "../include/libft.h"
+
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*node;
+	node = malloc(sizeof(*node));
+	if (!node)
+		return (NULL);
+	node -> content = content;
+	node -> next = NULL;
+	return (node);
+}

@@ -1,15 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cmp.h                                           :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:05:44 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 16:05:48 by mobenais         ###   ########.fr       */
+/*   Created: 2025/10/29 17:07:34 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/29 18:33:21 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* prototype of function for compare two string or to space of memory*/
-int	ft_strncmp(const char *src, const char *dest, size_t n);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
+#include "../include/libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	int i = ft_strlen(s);
+	write(fd, s, i);
+}
+/*
+int main(void)
+{
+	ft_putstr_fd("oui je suis malade", 2);
+}
+*/

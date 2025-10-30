@@ -1,61 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 19:57:51 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/29 17:36:53 by mobenais         ###   ########.fr       */
+/*   Created: 2025/10/29 12:20:55 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/29 13:25:59 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-static	int len_nbr(int n)
+char	test(unsigned int i, char j)
 {
-	int i;
-
-	i = 0;
-	if (n <= 0)
-		i = 1;
-	while(n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
+	j -= (char)i;
+	return (j);
 }
 
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*ptr;
-	int	len;
-	unsigned int	tmp;
+	size_t	i;
 
-	len = len_nbr(n);
-	ptr = malloc(sizeof(*ptr) * (len + 1));
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	ptr = malloc(sizeof(*ptr) * (ft_strlen(s) + 1));
 	if (!ptr)
 		return (NULL);
-	ptr[len] = '\0';
-	if (n < 0)
-		tmp = -n;
-	else
-		tmp = n;
-	while (len--)
+	while (s[i])
 	{
-		ptr[len] = (tmp % 10) + '0';
-		tmp /= 10;
-		if (n < 0 && len == 0)
-		{
-			ptr[0] = '-';
-			break;
-		}
+		ptr[i] = f((unsigned int)i, s[i]);
+		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
 
 int main(void)
 {
-	printf("%s\n", ft_itoa(-123456));
+	const char *c = "je suis malade";
+	char *ptr;
+
+	ptr = ft_strmapi(c, test);
+	if (!ptr)
+		printf("erreur mon frere\n");
+	printf("result : %s\n", ptr);
+	free(ptr);
+	return 0;
 }

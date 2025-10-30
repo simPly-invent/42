@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bool.h                                          :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:24:59 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/22 16:26:32 by mobenais         ###   ########.fr       */
+/*   Created: 2025/10/30 21:18:28 by mobenais          #+#    #+#             */
+/*   Updated: 2025/10/30 21:36:56 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* prototype of function that return an boolean */
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isprint(int ch);
+#include "../include/libft.h"	
+
+void	ft_lstadd_front(t_list **alst, t_list *new)
+{
+	if (!alst || !new)
+		return ;
+	new -> next = *alst;
+	*alst = new;
+}

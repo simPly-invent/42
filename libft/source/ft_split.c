@@ -6,7 +6,7 @@
 /*   By: mobenais <mobenais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:45:38 by mobenais          #+#    #+#             */
-/*   Updated: 2025/10/28 11:47:32 by mobenais         ###   ########.fr       */
+/*   Updated: 2025/10/29 20:41:12 by mobenais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,11 @@ static char	*ft_strdup_range(char const *s1, size_t start, size_t end)
 	return ptr;
 }
 
+
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	int	words_index;
-	int	size_big_array;
 	int	i;
 	int	start;
 	int	end;
@@ -76,16 +76,15 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	words_index = 0;
-	size_big_array = count_word(s, c) + 1;
-	ptr = malloc(sizeof(*ptr) * size_big_array);
+	ptr = malloc(sizeof(*ptr) * (count_word(s, c) + 1));
 	if (!ptr)
 		return (NULL);
-	while (words_index < size_big_array)
+	while (words_index < count_word(s, c))
 	{
 		while (s[i] && s[i] == c)
 			i++;
 		start = i;
-		while (s[i] && s[i] != c)
+		while (s[i++] && s[i++] != c)
 			i++;
 		end = i;
 		ptr[words_index] = ft_strdup_range(s, start, end);
@@ -93,7 +92,7 @@ char	**ft_split(char const *s, char c)
 			return ft_free_all(ptr, words_index);
 		words_index++;
 	}
-	ptr[count_word(s, c)] = NULL;
+	ptr[words_index] = NULL;
 	return (ptr);
 }
 
